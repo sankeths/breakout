@@ -1,0 +1,57 @@
+#main_block{
+  margin: auto;
+  width: 500px;
+  border: 20px solid teal;
+  padding: 10px;
+  height: 600px;
+  position: relative;
+  border-radius: 25px;
+}
+
+#play_block{
+  margin: auto;
+  width: 75px;
+  border: 0px solid white;
+  padding-bottom: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: skyblue;
+  border-radius: 50px;
+}
+
+#mousemove_block{
+  margin: auto;
+  width: 500px;
+  border: 20px solid teal;
+  padding: 10px;
+  height: 100px;
+  position: relative;
+  border-radius: 25px;
+}
+
+#gameStartText{
+  margin: 0 auto;
+  position: relative;
+  /*top: 50%;*/
+  left: 20%;
+  color: teal;
+}
+
+#square_block{
+  margin: auto;
+  width: 20px;
+  border: 2px solid white;
+  padding-bottom: 20px;
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  background-color: teal;
+  border-radius: 50%;
+}
+
+.square_block:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
