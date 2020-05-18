@@ -36,7 +36,7 @@ document.addEventListener('mouseenter', onMouseUpdate, false);
 mousemove_block.onclick = function(){
     game_restart = "True";
     if(game_inprogress != "True"){
-        StartText.innerText = "Move Mouse within this game pad ";
+        StartText.innerText = "Move Mouse inside this game pad ";
         Runner();
     }
 };
