@@ -1,5 +1,45 @@
 body{
   font-family: "Comic Sans MS", "Comic Sans", cursive;
+  color: teal;
+}
+
+.column1 {
+  float: left;
+  width: 70%;
+}
+
+.column2 {
+  float: left;
+  width: 30%;
+}
+
+#Welcome{
+  padding-top: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+@media screen and (max-width: 900px) {
+  .column1 {
+    width: 100%;
+  }
+.column2 {
+    width: 100%;
+  }
+#Welcome{
+    padding-top: 0;
+
+    text-align: center;
+  }
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 #main_block{
   margin: auto;

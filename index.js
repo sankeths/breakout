@@ -1,4 +1,4 @@
-console.log("connected");
+//console.log("connected");
 
 var x = null;
 var y = null;
@@ -25,6 +25,8 @@ var incrementer = 0.5;
 var StartText = document.getElementById("gameStartText");
 var gameStatus = document.getElementById("gamestatus");
 var gameUpdate = document.getElementById("gameUpdate");
+var playername = "You";
+var logger = document.getElementById("Welcome");
 
 
 square_block.style.bottom = groundY+"px";
@@ -100,19 +102,20 @@ function game(){
 
     if(currentY <= groundY ){
         if(currentX >= playerPos-22 && currentX <= playerPos + 60){
-            console.log("tackled at "+playerPos);
+            // console.log("tackled at "+playerPos);
             game_tackled = game_tackled + 1;
             incrementer = Math.ceil(game_tackled/3);
 
         }
         else{
-            console.log("hit the ground at "+currentX);
-            console.log("player positioned at "+playerPos);
-            console.log("********************************");
-            console.log("Game Over");
-            console.log("Game Tackled: "+game_tackled);
-            console.log("********************************")
+            // console.log("hit the ground at "+currentX);
+            // console.log("player positioned at "+playerPos);
+            // console.log("********************************");
+            // console.log("Game Over");
+            // console.log("Game Tackled: "+game_tackled);
+            // console.log("********************************")
             gameUpdate.innerText = "Your score is "+game_tackled+" !";
+            logger.innerText = logger.innerText+"\n"+"You scored "+game_tackled;
             game_over = "True";
             game_inprogress = "False";
             game_tackled = 0;
