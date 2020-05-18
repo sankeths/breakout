@@ -23,6 +23,9 @@ var game_tackled = 0;
 var Resid;
 var incrementer = 0.5;
 var StartText = document.getElementById("gameStartText");
+var gameStatus = document.getElementById("gamestatus");
+var gameUpdate = document.getElementById("gameUpdate");
+
 
 square_block.style.bottom = groundY+"px";
 square_block.style.left = x + 27 +"px";
@@ -37,6 +40,8 @@ mousemove_block.onclick = function(){
     game_restart = "True";
     if(game_inprogress != "True"){
         StartText.innerText = "Move Mouse inside this game pad ";
+        gameStatus.innerText = "";
+        gameUpdate.innerText = "";
         Runner();
     }
 };
@@ -107,11 +112,13 @@ function game(){
             console.log("Game Over");
             console.log("Game Tackled: "+game_tackled);
             console.log("********************************")
+            gameUpdate.innerText = "Your score is "+game_tackled+" !";
             game_over = "True";
             game_inprogress = "False";
             game_tackled = 0;
             clearInterval(Resid);
             StartText.innerText = "Click anywhere in this pad to RESTART this game";
+            gameStatus.innerText = "Game Over";
         }
     }
 
