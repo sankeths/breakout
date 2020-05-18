@@ -41,6 +41,14 @@ body{
   display: table;
   clear: both;
 }
+
+
+#gamepane{
+display: none;
+}
+
+
+
 #main_block{
   margin: auto;
   width: 500px;
@@ -83,17 +91,18 @@ body{
 
 #gameUpdate{
   margin: 0 auto;
-  position: relative;
+  position: absolute;
   top: 60%;
-  left: 20%;
+  left: 30%;
   color: teal;
 }
 
 #gamestatus{
+  font-size: 30px;
   margin: 0 auto;
-  position: relative;
+  position: absolute;
   top: 50%;
-  left: 40%;
+  left: 20%;
   color: teal;
 }
 #square_block{
@@ -106,10 +115,55 @@ body{
   left: 0;
   background-color: teal;
   border-radius: 50%;
+
 }
 
 .square_block:after {
   content: "";
   display: block;
   padding-bottom: 100%;
+}
+
+
+#Name{
+/*  margin-left: 35%;*/
+  margin-top: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+}
+
+#getName{
+  max-width: 375px;
+  color: teal;
+  font-size: 40px;
+  background-color: none;
+  border: 0 solid white;
+  outline: none;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 100px;
+  background-color: teal;
+  color: #fff;
+  text-align: right;
+  border-radius: 6px;
+  padding: 5px 5px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: -1;
+}
+
+.tooltip .tooltiptext {
+  visibility: visible;
 }

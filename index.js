@@ -1,5 +1,11 @@
 //console.log("connected");
 
+var namefield = document.getElementById("getName");
+
+
+namefield.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+
 var x = null;
 var y = null;
 var game_restart = "False"
@@ -27,6 +33,14 @@ var gameStatus = document.getElementById("gamestatus");
 var gameUpdate = document.getElementById("gameUpdate");
 var playername = "You";
 var logger = document.getElementById("Welcome");
+var gamepane = document.getElementById("gamepane");
+var namepane = document.getElementById("namepane");
+
+
+
+namepane.style.display = "none";
+gamepane.style.display = "block";
+playername = namefield.value;
 
 
 square_block.style.bottom = groundY+"px";
@@ -114,14 +128,14 @@ function game(){
             // console.log("Game Over");
             // console.log("Game Tackled: "+game_tackled);
             // console.log("********************************")
-            gameUpdate.innerText = "Your score is "+game_tackled+" !";
-            logger.innerText = logger.innerText+"\n"+"You scored "+game_tackled;
+            gameUpdate.innerText = playername+" your score is "+game_tackled+" !";
+            logger.innerText = logger.innerText+"\n"+playername+" scored "+game_tackled;
             game_over = "True";
             game_inprogress = "False";
             game_tackled = 0;
             clearInterval(Resid);
             StartText.innerText = "Click anywhere in this pad to RESTART this game";
-            gameStatus.innerText = "Game Over";
+            gameStatus.innerText = "Game Over "+playername ;
         }
     }
 
@@ -185,3 +199,5 @@ function game(){
         // console.log("****************************************");
     }
 }
+}
+});
